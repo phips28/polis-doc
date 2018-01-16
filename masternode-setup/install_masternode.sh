@@ -93,7 +93,8 @@ sudo apt-get -y install \
     libdb4.8-dev \
     libdb4.8++-dev \
     libminiupnpc-dev \
-    unzip
+    unzip \
+    libzmq5
 
 # Install fail2ban if needed
 if [[ ("$install_fail2ban" == "y" || "$install_fail2ban" == "Y" || "$install_fail2ban" == "") ]]; then
