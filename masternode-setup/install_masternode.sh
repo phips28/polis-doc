@@ -122,17 +122,18 @@ fi
 # Download polis
 echo && echo "Downloading ..."
 sleep 3
-wget https://github.com/polispay/polis/releases/download/v1.1.0/poliscore-1.1.0-linux.zip
-unzip poliscore-1.1.0-linux.zip
-rm poliscore-1.1.0-linux.zip
+wget https://github.com/polispay/polis/releases/download/v1.2.1/poliscore-1.2.1-linux64.tar.gz
+#https://github.com/polispay/polis/releases/download/v1.2.1/poliscore-1.2.1-linux.zip
+tar -xvzf poliscore-1.2.1-linux64.tar.gz
+rm poliscore-1.2.1-linux64.tar.gz
 
 # Install polis
-echo && echo "Installing poliscore-1.0.0..."
+echo && echo "Installing poliscore-1.2.1..."
 sleep 3
-sudo mv ~/poliscore-1.1.0-linux/usr/local/bin/polis{d,-cli} /usr/local/bin
+sudo mv ~/poliscore-1.2.1/usr/local/bin/polis{d,-cli} /usr/local/bin
 
 # Create config for poliscore
-echo && echo "Configuring poliscore-1.1.0..."
+echo && echo "Configuring poliscore-1.2.1..."
 sleep 3
 rpcuser=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 rpcpassword=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
