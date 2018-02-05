@@ -130,7 +130,7 @@ rm poliscore-1.2.1-linux64.tar.gz
 # Install polis
 echo && echo "Installing poliscore-1.2.1..."
 sleep 3
-sudo mv ~/poliscore-1.2.1/usr/local/bin/polis{d,-cli} /usr/local/bin
+sudo mv ~/poliscore-1.2.1/bin/polis{d,-cli} /usr/local/bin
 
 # Create config for poliscore
 echo && echo "Configuring poliscore-1.2.1..."
